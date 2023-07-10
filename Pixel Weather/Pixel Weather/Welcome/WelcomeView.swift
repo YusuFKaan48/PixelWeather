@@ -1,10 +1,3 @@
-//
-//  WelcomeViewController.swift
-//  Pixel Weather
-//
-//  Created by Yusuf Kaan USTA on 10.07.2023.
-//
-
 import Foundation
 import UIKit
 import CoreLocation
@@ -16,8 +9,10 @@ class WelcomeView: UIView {
     let welcomeTitle = UILabel()
     let welcomeParagraph = UILabel()
     let LocationFindButton = UIButton()
-    
+
     let locationManager = CLLocationManager()
+    
+    private var originalButtonTransform: CGAffineTransform = .identity
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -43,13 +38,13 @@ extension WelcomeView {
         if let font = UIFont(name: "Minecraft", size: 32) {
             welcomeTitle.font = font
         }
-        welcomeTitle.text = "Welcome"
+        welcomeTitle.text = "Welcome..."
         welcomeTitle.textColor = .white
         
         if let font = UIFont(name: "Minecraft", size: 16) {
             welcomeParagraph.font = font
         }
-        welcomeParagraph.text = "Welcome to the Pixel Weather App. You can see weather with pixel images. Have fun..."
+        welcomeParagraph.text = "Welcome to the Pixel Weather App. You can see weather with pixel images."
         welcomeParagraph.textColor = .white
         welcomeParagraph.numberOfLines = 0
         
@@ -64,7 +59,8 @@ extension WelcomeView {
         let attributedTitle = NSAttributedString(string: "Continue", attributes: buttonTitleAttributes)
         LocationFindButton.setAttributedTitle(attributedTitle, for: .normal)
         LocationFindButton.layer.cornerRadius = 16
-        LocationFindButton.addTarget(self, action: #selector(findLocationButtonTapped), for: .touchUpInside)
+        LocationFindButton.addTarget(self, action: #selector(animateButton), for: .touchUpInside)
+        originalButtonTransform = LocationFindButton.transform
     }
     
     func layout() {
@@ -109,6 +105,31 @@ extension WelcomeView {
         locationManager.requestLocation()
         print("Find location button tapped")
     }
+    
+    @objc func animateButton() {
+        // Butonun küçülme animasyonunu tanımlayın
+        let scaleDownAnimation = {
+            self.LocationFindButton.transform = self.originalButtonTransform.scaledBy(x: 0.95, y: 0.95)
+        }
+        
+        // Butonun normale dönme animasyonunu tanımlayın
+        let scaleUpAnimation = {
+            self.LocationFindButton.transform = self.originalButtonTransform
+        }
+        
+        // Küçülme animasyonunu başlatın
+        UIView.animate(withDuration: 0.1, animations: scaleDownAnimation) { _ in
+            // Normale dönme animasyonunu başlatın
+            UIView.animate(withDuration: 0.1, animations: scaleUpAnimation)
+        }
+        
+        // İstenirse, butona tıklandığında başka işlemler yapabilirsiniz
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.delegate = self
+        locationManager.requestLocation()
+        print("Find location button tapped")
+    }
+
 }
 
 extension WelcomeView: CLLocationManagerDelegate {
@@ -122,3 +143,4 @@ extension WelcomeView: CLLocationManagerDelegate {
         print("Location error: \(error.localizedDescription)")
     }
 }
+
