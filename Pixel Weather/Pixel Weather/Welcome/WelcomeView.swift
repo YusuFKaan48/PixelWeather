@@ -1,3 +1,4 @@
+
 import Foundation
 import UIKit
 import CoreLocation
@@ -81,7 +82,7 @@ extension WelcomeView {
             welcomeBackgroundImage.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
         
-        welcomeBackgroundImage.image = UIImage(named: "1.5")
+        welcomeBackgroundImage.image = UIImage(named: "9.5")
         welcomeBackgroundImage.contentMode = .scaleAspectFill
         
         NSLayoutConstraint.activate([
@@ -143,4 +144,3 @@ extension WelcomeView: CLLocationManagerDelegate {
         print("Location error: \(error.localizedDescription)")
     }
 }
-

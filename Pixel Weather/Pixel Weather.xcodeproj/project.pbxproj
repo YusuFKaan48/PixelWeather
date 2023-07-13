@@ -14,6 +14,8 @@
 		D2F805B22A5C0A1F00F13E4B /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F805B12A5C0A1F00F13E4B /* WelcomeView.swift */; };
 		D2F805BF2A5C181C00F13E4B /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2F805BE2A5C181B00F13E4B /* Minecraft.ttf */; };
 		D2F805C22A5C3E1000F13E4B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F805C12A5C3E1000F13E4B /* Location.swift */; };
+		D2F805C82A5D1D5B00F13E4B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F805C72A5D1D5B00F13E4B /* MainViewController.swift */; };
+		D2F805CA2A5D1D6700F13E4B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F805C92A5D1D6700F13E4B /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		D2F805B12A5C0A1F00F13E4B /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		D2F805BE2A5C181B00F13E4B /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Minecraft.ttf; path = ../../Downloads/Minecraft.ttf; sourceTree = "<group>"; };
 		D2F805C12A5C3E1000F13E4B /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		D2F805C72A5D1D5B00F13E4B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D2F805C92A5D1D6700F13E4B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				D2F8059B2A5C062900F13E4B /* AppDelegate.swift */,
-				D2F805C42A5C51AB00F13E4B /* Manager */,
+				D2F805C62A5D1D3F00F13E4B /* Main */,
 				D2F805C32A5C519F00F13E4B /* Welcome */,
+				D2F805C42A5C51AB00F13E4B /* Manager */,
 				D2F805AF2A5C098E00F13E4B /* Files */,
 			);
 			path = "Pixel Weather";
@@ -92,6 +97,15 @@
 				D2F805C12A5C3E1000F13E4B /* Location.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		D2F805C62A5D1D3F00F13E4B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D2F805C72A5D1D5B00F13E4B /* MainViewController.swift */,
+				D2F805C92A5D1D6700F13E4B /* MainView.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +180,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2F805A02A5C062900F13E4B /* WelcomeViewController.swift in Sources */,
+				D2F805CA2A5D1D6700F13E4B /* MainView.swift in Sources */,
 				D2F805B22A5C0A1F00F13E4B /* WelcomeView.swift in Sources */,
 				D2F805C22A5C3E1000F13E4B /* Location.swift in Sources */,
 				D2F8059C2A5C062900F13E4B /* AppDelegate.swift in Sources */,
+				D2F805C82A5D1D5B00F13E4B /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
