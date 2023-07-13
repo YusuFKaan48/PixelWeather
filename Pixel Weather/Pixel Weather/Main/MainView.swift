@@ -15,7 +15,6 @@ class MainView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         style()
         layout()
     }
@@ -32,7 +31,7 @@ extension MainView {
         bottomStackView.axis = .vertical
         bottomStackView.spacing = 8
         
-        glassCard.backgroundColor = .init(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.30)
+        glassCard.backgroundColor = .init(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.25)
         glassCard.layer.cornerRadius = 16
         
         if let font = UIFont(name: "Minecraft", size: 32) {
@@ -92,7 +91,7 @@ extension MainView {
             mainBackgroundImage.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
         
-        mainBackgroundImage.image = UIImage(named: "8.5")
+        mainBackgroundImage.image = UIImage(named: "Variations2")
         mainBackgroundImage.contentMode = .scaleAspectFill
            
            NSLayoutConstraint.activate([
@@ -104,7 +103,7 @@ extension MainView {
            ])
         
         NSLayoutConstraint.activate([
-            todayWeather.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 128),
+            todayWeather.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 32),
             todayWeather.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
             todayWeather.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32)
         ])
@@ -115,9 +114,7 @@ extension MainView {
         ])
         
         NSLayoutConstraint.activate([
-            bottomStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -64),
-            bottomStackView.widthAnchor.constraint(equalToConstant: 329),
-            bottomStackView.heightAnchor.constraint(equalToConstant: 170),
+            bottomStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -32),
             bottomStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
             bottomStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32)
         ])
