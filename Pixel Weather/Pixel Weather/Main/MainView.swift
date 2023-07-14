@@ -91,7 +91,7 @@ extension MainView {
             mainBackgroundImage.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
         
-        mainBackgroundImage.image = UIImage(named: "Variations2")
+        mainBackgroundImage.image = UIImage(named: "Variations-4")
         mainBackgroundImage.contentMode = .scaleAspectFill
            
            NSLayoutConstraint.activate([
