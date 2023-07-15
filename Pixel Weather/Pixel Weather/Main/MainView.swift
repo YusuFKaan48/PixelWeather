@@ -12,8 +12,7 @@ class MainView: UIView {
     
     let mainBackgroundImage = UIImageView()
     let todayWeather = UILabel()
-    let glassCard = UIStackView()
-    let testText = UILabel()
+    let cardView = CardView()
     let bottomView = BottomView()
     
     
@@ -32,33 +31,22 @@ extension MainView {
     func style() {
         translatesAutoresizingMaskIntoConstraints = false
         
-        glassCard.backgroundColor = .init(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.25)
-        glassCard.layer.cornerRadius = 16
-        
         if let font = UIFont(name: "Minecraft", size: 32) {
             todayWeather.font = font
         }
         todayWeather.text = "Today's weather"
         todayWeather.textColor = .white
-        
-        if let font = UIFont(name: "Minecraft", size: 12) {
-            testText.font = font
-        }
-        testText.text = "Test"
-        testText.textColor = .white
     }
     
     func layout() {
         addSubview(mainBackgroundImage)
-        addSubview(glassCard)
         addSubview(todayWeather)
-        glassCard.addArrangedSubview(testText)
+        addSubview(cardView)
         addSubview(bottomView)
        
         mainBackgroundImage.translatesAutoresizingMaskIntoConstraints = false
-        glassCard.translatesAutoresizingMaskIntoConstraints = false
         todayWeather.translatesAutoresizingMaskIntoConstraints = false
-        testText.translatesAutoresizingMaskIntoConstraints = false
+        cardView.translatesAutoresizingMaskIntoConstraints = false
         bottomView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -70,14 +58,6 @@ extension MainView {
         
         mainBackgroundImage.image = UIImage(named: "Variations-4")
         mainBackgroundImage.contentMode = .scaleAspectFill
-           
-           NSLayoutConstraint.activate([
-            glassCard.topAnchor.constraint(equalTo: todayWeather.bottomAnchor, constant: 16),
-            glassCard.widthAnchor.constraint(equalToConstant: 329),
-            glassCard.heightAnchor.constraint(equalToConstant: 170),
-            glassCard.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
-            glassCard.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32)
-           ])
         
         NSLayoutConstraint.activate([
             todayWeather.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 32),
@@ -86,14 +66,11 @@ extension MainView {
         ])
         
         NSLayoutConstraint.activate([
-            testText.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 56),
-            testText.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32)
+            cardView.topAnchor.constraint(equalTo: todayWeather.bottomAnchor, constant: 16),
         ])
         
         NSLayoutConstraint.activate([
             bottomView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0),
-            bottomView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
-            bottomView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0)
         ])
     }
 }

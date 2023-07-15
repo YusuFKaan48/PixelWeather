@@ -108,23 +108,18 @@ extension WelcomeView {
     }
     
     @objc func animateButton() {
-        // Butonun küçülme animasyonunu tanımlayın
         let scaleDownAnimation = {
             self.LocationFindButton.transform = self.originalButtonTransform.scaledBy(x: 0.95, y: 0.95)
         }
         
-        // Butonun normale dönme animasyonunu tanımlayın
         let scaleUpAnimation = {
             self.LocationFindButton.transform = self.originalButtonTransform
         }
         
-        // Küçülme animasyonunu başlatın
         UIView.animate(withDuration: 0.1, animations: scaleDownAnimation) { _ in
-            // Normale dönme animasyonunu başlatın
             UIView.animate(withDuration: 0.1, animations: scaleUpAnimation)
         }
-        
-        // İstenirse, butona tıklandığında başka işlemler yapabilirsiniz
+
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
         locationManager.requestLocation()
