@@ -1,3 +1,10 @@
+//
+//  MainView.swift
+//  Pixel Weather
+//
+//  Created by Yusuf Kaan USTA on 11.07.2023.
+//
+
 import Foundation
 import UIKit
 
@@ -7,10 +14,7 @@ class MainView: UIView {
     let todayWeather = UILabel()
     let glassCard = UIStackView()
     let testText = UILabel()
-    let bottomStackView = UIStackView()
-    let weatherState = UILabel()
-    let degreeState = UILabel()
-    let dateState = UILabel()
+    let bottomView = BottomView()
     
     
     override init(frame: CGRect) {
@@ -28,9 +32,6 @@ extension MainView {
     func style() {
         translatesAutoresizingMaskIntoConstraints = false
         
-        bottomStackView.axis = .vertical
-        bottomStackView.spacing = 8
-        
         glassCard.backgroundColor = .init(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.25)
         glassCard.layer.cornerRadius = 16
         
@@ -45,24 +46,6 @@ extension MainView {
         }
         testText.text = "Test"
         testText.textColor = .white
-        
-        if let font = UIFont(name: "Minecraft", size: 36) {
-            weatherState.font = font
-        }
-        weatherState.text = "Tokyo is Snowy"
-        weatherState.textColor = .init(red: 199/255, green: 86/255, blue: 80/255, alpha: 1.0)
-        
-        if let font = UIFont(name: "Minecraft", size: 36) {
-            degreeState.font = font
-        }
-        degreeState.text = "15°"
-        degreeState.textColor = .init(red: 199/255, green: 86/255, blue: 80/255, alpha: 1.0)
-        
-        if let font = UIFont(name: "Minecraft", size: 24) {
-            dateState.font = font
-        }
-        dateState.text = "Dec 1"
-        dateState.textColor = .init(red: 199/255, green: 86/255, blue: 80/255, alpha: 1.0)
     }
     
     func layout() {
@@ -70,19 +53,13 @@ extension MainView {
         addSubview(glassCard)
         addSubview(todayWeather)
         glassCard.addArrangedSubview(testText)
-        addSubview(bottomStackView)
-        bottomStackView.addArrangedSubview(weatherState)
-        bottomStackView.addArrangedSubview(degreeState)
-        bottomStackView.addArrangedSubview(dateState)
+        addSubview(bottomView)
        
         mainBackgroundImage.translatesAutoresizingMaskIntoConstraints = false
         glassCard.translatesAutoresizingMaskIntoConstraints = false
         todayWeather.translatesAutoresizingMaskIntoConstraints = false
         testText.translatesAutoresizingMaskIntoConstraints = false
-        bottomStackView.translatesAutoresizingMaskIntoConstraints = false
-        weatherState.translatesAutoresizingMaskIntoConstraints = false
-        degreeState.translatesAutoresizingMaskIntoConstraints = false
-        dateState.translatesAutoresizingMaskIntoConstraints = false
+        bottomView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             mainBackgroundImage.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -114,11 +91,10 @@ extension MainView {
         ])
         
         NSLayoutConstraint.activate([
-            bottomStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -32),
-            bottomStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
-            bottomStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32)
+            bottomView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0),
+            bottomView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
+            bottomView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0)
         ])
     }
 }
-
 

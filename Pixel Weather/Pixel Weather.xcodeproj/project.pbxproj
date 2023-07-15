@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2191B322A627454006EDBEC /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2191B312A627454006EDBEC /* BottomView.swift */; };
 		D2F8059C2A5C062900F13E4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F8059B2A5C062900F13E4B /* AppDelegate.swift */; };
 		D2F805A02A5C062900F13E4B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F8059F2A5C062900F13E4B /* WelcomeViewController.swift */; };
 		D2F805A52A5C062B00F13E4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2F805A42A5C062B00F13E4B /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D2191B312A627454006EDBEC /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		D2F805982A5C062900F13E4B /* Pixel Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pixel Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F8059B2A5C062900F13E4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2F8059F2A5C062900F13E4B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				D2F805C72A5D1D5B00F13E4B /* MainViewController.swift */,
 				D2F805C92A5D1D6700F13E4B /* MainView.swift */,
+				D2191B312A627454006EDBEC /* BottomView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				D2F805CA2A5D1D6700F13E4B /* MainView.swift in Sources */,
 				D2F805B22A5C0A1F00F13E4B /* WelcomeView.swift in Sources */,
 				D2F805C22A5C3E1000F13E4B /* Location.swift in Sources */,
+				D2191B322A627454006EDBEC /* BottomView.swift in Sources */,
 				D2F8059C2A5C062900F13E4B /* AppDelegate.swift in Sources */,
 				D2F805C82A5D1D5B00F13E4B /* MainViewController.swift in Sources */,
 			);
