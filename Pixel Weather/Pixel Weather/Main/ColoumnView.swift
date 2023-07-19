@@ -51,8 +51,8 @@ class ColumnView: UIView {
         hStack.addArrangedSubview(vStack)
         
         logoImageView.contentMode = .scaleAspectFit
-        logoImageView.widthAnchor.constraint(equalToConstant: 36).isActive = true
-        logoImageView.heightAnchor.constraint(equalToConstant: 36).isActive = true
+        logoImageView.widthAnchor.constraint(equalToConstant: 42).isActive = true
+        logoImageView.heightAnchor.constraint(equalToConstant: 42).isActive = true
         
         NSLayoutConstraint.activate([
             hStack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),

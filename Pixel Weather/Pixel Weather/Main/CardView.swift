@@ -44,22 +44,22 @@ class CardView: UIView {
         secondColumn.axis = .horizontal
         secondColumn.alignment = .top
         
-        columnView1.nameLabel.text = "Name 1"
-        columnView1.valueLabel.text = "Value 1"
+        columnView1.nameLabel.text = "Min temp"
+        columnView1.valueLabel.text = "7°"
         
-        columnView2.nameLabel.text = "Name 2"
-        columnView2.valueLabel.text = "Value 2"
+        columnView2.nameLabel.text = "Max temp"
+        columnView2.valueLabel.text = "17°"
         
-        columnView3.nameLabel.text = "Name 3"
-        columnView3.valueLabel.text = "Value 3"
+        columnView3.nameLabel.text = "Wind speed"
+        columnView3.valueLabel.text = "4 m/s"
         
-        columnView4.nameLabel.text = "Name 4"
-        columnView4.valueLabel.text = "Value 4"
+        columnView4.nameLabel.text = "Humidity"
+        columnView4.valueLabel.text = "%33"
         
-        columnView1.logoImageView.image = UIImage(named: "Thermometer")
-        columnView2.logoImageView.image = UIImage(named: "Thermometer")
-        columnView3.logoImageView.image = UIImage(named: "Thermometer")
-        columnView4.logoImageView.image = UIImage(named: "Thermometer")
+        columnView1.logoImageView.image = UIImage(named: "Min")
+        columnView2.logoImageView.image = UIImage(named: "Max")
+        columnView3.logoImageView.image = UIImage(named: "Wind")
+        columnView4.logoImageView.image = UIImage(named: "Humidity")
         
     }
     
@@ -77,6 +77,6 @@ class CardView: UIView {
                     glassCard.leadingAnchor.constraint(equalTo: leadingAnchor),
                     glassCard.trailingAnchor.constraint(equalTo: trailingAnchor),
                     glassCard.bottomAnchor.constraint(equalTo: bottomAnchor)
-                ])
+        ])
     }
 }

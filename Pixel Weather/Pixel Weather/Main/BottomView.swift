@@ -44,19 +44,19 @@ extension BottomView {
             weatherState.font = font
         }
         weatherState.text = "\(weather.name) is \(weather.weather[0].main)"
-        weatherState.textColor = .init(red: 199/255, green: 86/255, blue: 80/255, alpha: 1.0)
+        weatherState.textColor = .white
         
         if let font = UIFont(name: "Minecraft", size: 36) {
             degreeState.font = font
         }
         degreeState.text = (weather.main.feelsLike.roundDouble() + "°")
-        degreeState.textColor = .init(red: 199/255, green: 86/255, blue: 80/255, alpha: 1.0)
+        degreeState.textColor = .white
         
         if let font = UIFont(name: "Minecraft", size: 24) {
             dateState.font = font
         }
         dateState.text = Date().formatted(.dateTime.month().day())
-        dateState.textColor = .init(red: 199/255, green: 86/255, blue: 80/255, alpha: 1.0)
+        dateState.textColor = .white
     }
     
     func layout() {
