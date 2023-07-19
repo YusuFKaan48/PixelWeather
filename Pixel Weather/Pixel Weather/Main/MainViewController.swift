@@ -22,14 +22,16 @@ extension MainViewController {
     private func style() {
         mainView.translatesAutoresizingMaskIntoConstraints = false
     }
-    private func layout() {
-        view.addSubview(mainView)
-        
-        NSLayoutConstraint.activate([
-            mainView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            mainView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: mainView.trailingAnchor, multiplier: 1)
-        ])
-    }
+        private func layout() {
+            view.addSubview(mainView)
+            
+            NSLayoutConstraint.activate([
+                        mainView.topAnchor.constraint(equalTo: view.topAnchor),
+                        mainView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                        mainView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                        mainView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+                    ])
+        }
+
 }
 

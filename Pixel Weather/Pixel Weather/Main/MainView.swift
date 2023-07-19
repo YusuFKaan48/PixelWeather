@@ -38,40 +38,45 @@ extension MainView {
         todayWeather.textColor = .white
     }
     
-    func layout() {
-        addSubview(mainBackgroundImage)
-        addSubview(todayWeather)
-        addSubview(cardView)
-        addSubview(bottomView)
-       
-        mainBackgroundImage.translatesAutoresizingMaskIntoConstraints = false
-        todayWeather.translatesAutoresizingMaskIntoConstraints = false
-        cardView.translatesAutoresizingMaskIntoConstraints = false
-        bottomView.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            mainBackgroundImage.leadingAnchor.constraint(equalTo: leadingAnchor),
-            mainBackgroundImage.trailingAnchor.constraint(equalTo: trailingAnchor),
-            mainBackgroundImage.topAnchor.constraint(equalTo: topAnchor),
-            mainBackgroundImage.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
-        
-        mainBackgroundImage.image = UIImage(named: "Variations-4")
-        mainBackgroundImage.contentMode = .scaleAspectFill
-        
-        NSLayoutConstraint.activate([
-            todayWeather.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 32),
-            todayWeather.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
-            todayWeather.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32)
-        ])
-        
-        NSLayoutConstraint.activate([
-            cardView.topAnchor.constraint(equalTo: todayWeather.bottomAnchor, constant: 16),
-        ])
-        
-        NSLayoutConstraint.activate([
-            bottomView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0),
-        ])
-    }
+        func layout() {
+            addSubview(mainBackgroundImage)
+            addSubview(todayWeather)
+            addSubview(cardView)
+            addSubview(bottomView)
+           
+            mainBackgroundImage.translatesAutoresizingMaskIntoConstraints = false
+            todayWeather.translatesAutoresizingMaskIntoConstraints = false
+            cardView.translatesAutoresizingMaskIntoConstraints = false
+            bottomView.translatesAutoresizingMaskIntoConstraints = false
+            
+            NSLayoutConstraint.activate([
+                mainBackgroundImage.leadingAnchor.constraint(equalTo: leadingAnchor),
+                mainBackgroundImage.trailingAnchor.constraint(equalTo: trailingAnchor),
+                mainBackgroundImage.topAnchor.constraint(equalTo: topAnchor),
+                mainBackgroundImage.bottomAnchor.constraint(equalTo: bottomAnchor)
+            ])
+            
+            mainBackgroundImage.image = UIImage(named: "Variations-4")
+            mainBackgroundImage.contentMode = .scaleAspectFill
+            
+            NSLayoutConstraint.activate([
+                todayWeather.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 32),
+                todayWeather.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
+            ])
+            
+            NSLayoutConstraint.activate([
+                cardView.topAnchor.constraint(equalTo: todayWeather.bottomAnchor, constant: 16),
+                cardView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
+                cardView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
+                cardView.heightAnchor.constraint(equalToConstant: 170),
+                cardView.widthAnchor.constraint(equalToConstant: 600),
+            ])
+            
+            NSLayoutConstraint.activate([
+                bottomView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+                bottomView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
+                bottomView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32)
+            ])
+        }
 }
 

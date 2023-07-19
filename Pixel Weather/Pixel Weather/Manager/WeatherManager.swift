@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 
-class WeatherManager {
+class WeatherManager: NSObject, ObservableObject {
 
     
     func getCurrentWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) async throws -> ResponseBody {

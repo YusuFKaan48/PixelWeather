@@ -9,18 +9,19 @@
 /* Begin PBXBuildFile section */
 		D2191B322A627454006EDBEC /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2191B312A627454006EDBEC /* BottomView.swift */; };
 		D2191B342A627997006EDBEC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2191B332A627997006EDBEC /* CardView.swift */; };
-		D2191B362A629661006EDBEC /* ColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2191B352A629661006EDBEC /* ColumnView.swift */; };
 		D2191B392A629D26006EDBEC /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2191B382A629D26006EDBEC /* ModelData.swift */; };
 		D2191B3B2A629D49006EDBEC /* weatherData.json in Resources */ = {isa = PBXBuildFile; fileRef = D2191B3A2A629D49006EDBEC /* weatherData.json */; };
 		D2191B3D2A629D8F006EDBEC /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2191B3C2A629D8F006EDBEC /* WeatherManager.swift */; };
 		D2191B3F2A629DC7006EDBEC /* ConverterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2191B3E2A629DC7006EDBEC /* ConverterData.swift */; };
+		D2191B412A62DDB4006EDBEC /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2191B402A62DDB4006EDBEC /* LoadingView.swift */; };
+		D26E67E92A654B5300BC55CB /* ColoumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E67E82A654B5300BC55CB /* ColoumnView.swift */; };
 		D2F8059C2A5C062900F13E4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F8059B2A5C062900F13E4B /* AppDelegate.swift */; };
 		D2F805A02A5C062900F13E4B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F8059F2A5C062900F13E4B /* WelcomeViewController.swift */; };
 		D2F805A52A5C062B00F13E4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2F805A42A5C062B00F13E4B /* Assets.xcassets */; };
 		D2F805A82A5C062B00F13E4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2F805A62A5C062B00F13E4B /* LaunchScreen.storyboard */; };
 		D2F805B22A5C0A1F00F13E4B /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F805B12A5C0A1F00F13E4B /* WelcomeView.swift */; };
 		D2F805BF2A5C181C00F13E4B /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2F805BE2A5C181B00F13E4B /* Minecraft.ttf */; };
-		D2F805C22A5C3E1000F13E4B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F805C12A5C3E1000F13E4B /* Location.swift */; };
+		D2F805C22A5C3E1000F13E4B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F805C12A5C3E1000F13E4B /* LocationManager.swift */; };
 		D2F805C82A5D1D5B00F13E4B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F805C72A5D1D5B00F13E4B /* MainViewController.swift */; };
 		D2F805CA2A5D1D6700F13E4B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F805C92A5D1D6700F13E4B /* MainView.swift */; };
 /* End PBXBuildFile section */
@@ -28,11 +29,12 @@
 /* Begin PBXFileReference section */
 		D2191B312A627454006EDBEC /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		D2191B332A627997006EDBEC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		D2191B352A629661006EDBEC /* ColumnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnView.swift; sourceTree = "<group>"; };
 		D2191B382A629D26006EDBEC /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		D2191B3A2A629D49006EDBEC /* weatherData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = weatherData.json; sourceTree = "<group>"; };
 		D2191B3C2A629D8F006EDBEC /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		D2191B3E2A629DC7006EDBEC /* ConverterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterData.swift; sourceTree = "<group>"; };
+		D2191B402A62DDB4006EDBEC /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		D26E67E82A654B5300BC55CB /* ColoumnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoumnView.swift; sourceTree = "<group>"; };
 		D2F805982A5C062900F13E4B /* Pixel Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pixel Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F8059B2A5C062900F13E4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2F8059F2A5C062900F13E4B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -41,7 +43,7 @@
 		D2F805A92A5C062B00F13E4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F805B12A5C0A1F00F13E4B /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		D2F805BE2A5C181B00F13E4B /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Minecraft.ttf; path = ../../Downloads/Minecraft.ttf; sourceTree = "<group>"; };
-		D2F805C12A5C3E1000F13E4B /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		D2F805C12A5C3E1000F13E4B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D2F805C72A5D1D5B00F13E4B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D2F805C92A5D1D6700F13E4B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 			children = (
 				D2F8059F2A5C062900F13E4B /* WelcomeViewController.swift */,
 				D2F805B12A5C0A1F00F13E4B /* WelcomeView.swift */,
+				D2191B402A62DDB4006EDBEC /* LoadingView.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -119,7 +122,7 @@
 		D2F805C42A5C51AB00F13E4B /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				D2F805C12A5C3E1000F13E4B /* Location.swift */,
+				D2F805C12A5C3E1000F13E4B /* LocationManager.swift */,
 				D2191B3C2A629D8F006EDBEC /* WeatherManager.swift */,
 			);
 			path = Manager;
@@ -132,7 +135,7 @@
 				D2F805C92A5D1D6700F13E4B /* MainView.swift */,
 				D2191B312A627454006EDBEC /* BottomView.swift */,
 				D2191B332A627997006EDBEC /* CardView.swift */,
-				D2191B352A629661006EDBEC /* ColumnView.swift */,
+				D26E67E82A654B5300BC55CB /* ColoumnView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -209,17 +212,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D26E67E92A654B5300BC55CB /* ColoumnView.swift in Sources */,
 				D2F805A02A5C062900F13E4B /* WelcomeViewController.swift in Sources */,
 				D2F805CA2A5D1D6700F13E4B /* MainView.swift in Sources */,
 				D2F805B22A5C0A1F00F13E4B /* WelcomeView.swift in Sources */,
-				D2191B362A629661006EDBEC /* ColumnView.swift in Sources */,
-				D2F805C22A5C3E1000F13E4B /* Location.swift in Sources */,
+				D2F805C22A5C3E1000F13E4B /* LocationManager.swift in Sources */,
 				D2191B322A627454006EDBEC /* BottomView.swift in Sources */,
 				D2191B3D2A629D8F006EDBEC /* WeatherManager.swift in Sources */,
 				D2F8059C2A5C062900F13E4B /* AppDelegate.swift in Sources */,
 				D2191B3F2A629DC7006EDBEC /* ConverterData.swift in Sources */,
 				D2191B392A629D26006EDBEC /* ModelData.swift in Sources */,
 				D2191B342A627997006EDBEC /* CardView.swift in Sources */,
+				D2191B412A62DDB4006EDBEC /* LoadingView.swift in Sources */,
 				D2F805C82A5D1D5B00F13E4B /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

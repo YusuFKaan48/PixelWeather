@@ -15,6 +15,7 @@ class WelcomeView: UIView {
     
     private var originalButtonTransform: CGAffineTransform = .identity
     
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -91,13 +92,12 @@ extension WelcomeView {
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
         ])
-        
-        NSLayoutConstraint.activate([
-            LocationFindButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            LocationFindButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            LocationFindButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -120),
-            LocationFindButton.heightAnchor.constraint(equalToConstant: 60)
-        ])
+                NSLayoutConstraint.activate([
+                    LocationFindButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+                    LocationFindButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+                    LocationFindButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -64),
+                    LocationFindButton.heightAnchor.constraint(equalToConstant: 60)
+                ])
     }
     
     @objc func findLocationButtonTapped() {
@@ -132,6 +132,17 @@ extension WelcomeView: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
             print("Current location: \(location.coordinate.latitude), \(location.coordinate.longitude)")
+            
+            
+            
+               
+            
+            
+                //        window?.rootViewController = MainViewController()
+            
+            
+            
+            
         }
     }
     

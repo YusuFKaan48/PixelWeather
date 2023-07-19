@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import CoreLocation
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    let locationManager = LocationManager()
    
     var window: UIWindow?
      
@@ -17,9 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
-        window?.rootViewController = MainViewController()
-     
+        window?.rootViewController = WelcomeViewController()
+   //    window?.rootViewController = MainViewController()
+        
         return true
     }
-
 }

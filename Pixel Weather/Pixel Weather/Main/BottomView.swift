@@ -7,15 +7,21 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 class BottomView: UIView {
     
+    let locationManager = CLLocationManager()
+    
+    var weather: ResponseBody
+
     let bottomStackView = UIStackView()
     let weatherState = UILabel()
     let degreeState = UILabel()
     let dateState = UILabel()
     
     override init(frame: CGRect) {
+        self.weather = previewWeather
         super.init(frame: frame)
         
         style()
@@ -37,19 +43,19 @@ extension BottomView {
         if let font = UIFont(name: "Minecraft", size: 36) {
             weatherState.font = font
         }
-        weatherState.text = "Tokyo is Snowy"
+        weatherState.text = "\(weather.name) is \(weather.weather[0].main)"
         weatherState.textColor = .init(red: 199/255, green: 86/255, blue: 80/255, alpha: 1.0)
         
         if let font = UIFont(name: "Minecraft", size: 36) {
             degreeState.font = font
         }
-        degreeState.text = "15°"
+        degreeState.text = (weather.main.feelsLike.roundDouble() + "°")
         degreeState.textColor = .init(red: 199/255, green: 86/255, blue: 80/255, alpha: 1.0)
         
         if let font = UIFont(name: "Minecraft", size: 24) {
             dateState.font = font
         }
-        dateState.text = "Dec 1"
+        dateState.text = Date().formatted(.dateTime.month().day())
         dateState.textColor = .init(red: 199/255, green: 86/255, blue: 80/255, alpha: 1.0)
     }
     
@@ -66,9 +72,6 @@ extension BottomView {
         
         NSLayoutConstraint.activate([
             bottomStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -32),
-            bottomStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
-            bottomStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32)
         ])
     }
 }
-
