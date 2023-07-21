@@ -92,12 +92,12 @@ extension WelcomeView {
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
         ])
-                NSLayoutConstraint.activate([
-                    LocationFindButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-                    LocationFindButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-                    LocationFindButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -64),
-                    LocationFindButton.heightAnchor.constraint(equalToConstant: 60)
-                ])
+        NSLayoutConstraint.activate([
+            LocationFindButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            LocationFindButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            LocationFindButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -48),
+            LocationFindButton.heightAnchor.constraint(equalToConstant: 60)
+        ])
     }
     
     @objc func findLocationButtonTapped() {
@@ -138,7 +138,7 @@ extension WelcomeView: CLLocationManagerDelegate {
                
             
             
-                //        window?.rootViewController = MainViewController()
+                        window?.rootViewController = MainViewController()
             
             
             

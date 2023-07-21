@@ -28,7 +28,8 @@ extension WelcomeViewController {
         NSLayoutConstraint.activate([
             welcomeView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             welcomeView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: welcomeView.trailingAnchor, multiplier: 1)
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: welcomeView.trailingAnchor, multiplier: 1),
+            welcomeView.bottomAnchor.constraint(equalToSystemSpacingBelow: view.bottomAnchor, multiplier: 1)
         ])
     }
 }

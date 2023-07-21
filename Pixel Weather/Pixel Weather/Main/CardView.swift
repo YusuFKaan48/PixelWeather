@@ -16,8 +16,12 @@ class CardView: UIView {
     let columnView2 = ColumnView()
     let columnView3 = ColumnView()
     let columnView4 = ColumnView()
+
+    var weather: ResponseBody
     
+   
     override init(frame: CGRect) {
+        self.weather = previewWeather
         super.init(frame: frame)
         
         style()
@@ -40,26 +44,28 @@ class CardView: UIView {
         
         firstColumn.axis = .horizontal
         firstColumn.alignment = .top
+        firstColumn.spacing = 2
         
         secondColumn.axis = .horizontal
         secondColumn.alignment = .top
         
+            
         columnView1.nameLabel.text = "Min temp"
-        columnView1.valueLabel.text = "7°"
+        columnView1.valueLabel.text = "\(weather.main.tempMin.roundDouble() + ("°"))"
         
         columnView2.nameLabel.text = "Max temp"
-        columnView2.valueLabel.text = "17°"
+        columnView2.valueLabel.text = "\(weather.main.tempMax.roundDouble() + ("°"))"
         
         columnView3.nameLabel.text = "Wind speed"
-        columnView3.valueLabel.text = "4 m/s"
+        columnView3.valueLabel.text = "\(weather.wind.speed.roundDouble() + ("km/s"))"
         
         columnView4.nameLabel.text = "Humidity"
-        columnView4.valueLabel.text = "%33"
+        columnView4.valueLabel.text = "\(weather.main.humidity.roundDouble())%"
         
-        columnView1.logoImageView.image = UIImage(named: "Min")
-        columnView2.logoImageView.image = UIImage(named: "Max")
-        columnView3.logoImageView.image = UIImage(named: "Wind")
-        columnView4.logoImageView.image = UIImage(named: "Humidity")
+        columnView1.logoImageView.image = UIImage(named: "Min-black")
+        columnView2.logoImageView.image = UIImage(named: "Max-black")
+        columnView3.logoImageView.image = UIImage(named: "Wind-black")
+        columnView4.logoImageView.image = UIImage(named: "Humidity-black")
         
     }
     

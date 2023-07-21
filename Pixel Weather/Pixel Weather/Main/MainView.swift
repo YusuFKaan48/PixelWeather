@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 class MainView: UIView {
     
@@ -35,7 +36,8 @@ extension MainView {
             todayWeather.font = font
         }
         todayWeather.text = "Today's weather"
-        todayWeather.textColor = .white
+        todayWeather.textColor = .black
+        
     }
     
         func layout() {
@@ -56,7 +58,7 @@ extension MainView {
                 mainBackgroundImage.bottomAnchor.constraint(equalTo: bottomAnchor)
             ])
             
-            mainBackgroundImage.image = UIImage(named: "Variations-3")
+            mainBackgroundImage.image = UIImage(named: "1")
             mainBackgroundImage.contentMode = .scaleAspectFill
             
             NSLayoutConstraint.activate([
@@ -67,9 +69,8 @@ extension MainView {
             NSLayoutConstraint.activate([
                 cardView.topAnchor.constraint(equalTo: todayWeather.bottomAnchor, constant: 16),
                 cardView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
-                cardView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
                 cardView.heightAnchor.constraint(equalToConstant: 170),
-                cardView.widthAnchor.constraint(equalToConstant: 600),
+                cardView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.85),
             ])
             
             NSLayoutConstraint.activate([

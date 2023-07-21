@@ -38,10 +38,10 @@ class ColumnView: UIView {
         vStack.axis = .vertical
         
         nameLabel.font = UIFont(name: "Minecraft", size: 12)
-        nameLabel.textColor = .white
+        nameLabel.textColor = .black
          
         valueLabel.font = UIFont(name: "Minecraft", size: 20)
-        valueLabel.textColor = .white
+        valueLabel.textColor = .black
         
     }
     
