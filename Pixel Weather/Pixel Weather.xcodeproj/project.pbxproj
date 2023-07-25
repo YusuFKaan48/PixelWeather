@@ -13,7 +13,6 @@
 		D2191B3B2A629D49006EDBEC /* weatherData.json in Resources */ = {isa = PBXBuildFile; fileRef = D2191B3A2A629D49006EDBEC /* weatherData.json */; };
 		D2191B3D2A629D8F006EDBEC /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2191B3C2A629D8F006EDBEC /* WeatherManager.swift */; };
 		D2191B3F2A629DC7006EDBEC /* ConverterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2191B3E2A629DC7006EDBEC /* ConverterData.swift */; };
-		D2191B412A62DDB4006EDBEC /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2191B402A62DDB4006EDBEC /* LoadingView.swift */; };
 		D26E67E92A654B5300BC55CB /* ColoumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E67E82A654B5300BC55CB /* ColoumnView.swift */; };
 		D2F8059C2A5C062900F13E4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F8059B2A5C062900F13E4B /* AppDelegate.swift */; };
 		D2F805A02A5C062900F13E4B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F8059F2A5C062900F13E4B /* WelcomeViewController.swift */; };
@@ -33,7 +32,6 @@
 		D2191B3A2A629D49006EDBEC /* weatherData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = weatherData.json; sourceTree = "<group>"; };
 		D2191B3C2A629D8F006EDBEC /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		D2191B3E2A629DC7006EDBEC /* ConverterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterData.swift; sourceTree = "<group>"; };
-		D2191B402A62DDB4006EDBEC /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		D26E67E82A654B5300BC55CB /* ColoumnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoumnView.swift; sourceTree = "<group>"; };
 		D2F805982A5C062900F13E4B /* Pixel Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pixel Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F8059B2A5C062900F13E4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 			children = (
 				D2F8059F2A5C062900F13E4B /* WelcomeViewController.swift */,
 				D2F805B12A5C0A1F00F13E4B /* WelcomeView.swift */,
-				D2191B402A62DDB4006EDBEC /* LoadingView.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -223,7 +220,6 @@
 				D2191B3F2A629DC7006EDBEC /* ConverterData.swift in Sources */,
 				D2191B392A629D26006EDBEC /* ModelData.swift in Sources */,
 				D2191B342A627997006EDBEC /* CardView.swift in Sources */,
-				D2191B412A62DDB4006EDBEC /* LoadingView.swift in Sources */,
 				D2F805C82A5D1D5B00F13E4B /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,7 +10,7 @@ import CoreLocation
 
 class BottomView: UIView {
     let locationManager = CLLocationManager()
-    var weather: ResponseBody? // Optional, çünkü başlangıçta weather verisi boş olacak
+    var weather: ResponseBody?
     
     let bottomStackView = UIStackView()
     let weatherState = UILabel()
