@@ -87,25 +87,25 @@ extension MainView {
                 
                 switch weatherCondition {
                 case .rainy:
-                    mainBackgroundImage.image = UIImage(named: "1")
+                    mainBackgroundImage.image = UIImage(named: "3")
                 case .cloudy:
                     mainBackgroundImage.image = UIImage(named: "2")
                 case .sunny:
-                    mainBackgroundImage.image = UIImage(named: "3")
+                    mainBackgroundImage.image = UIImage(named: "1")
                 case .snowy:
-                    mainBackgroundImage.image = UIImage(named: "3")
+                    mainBackgroundImage.image = UIImage(named: "6")
                 case .foggy:
-                    mainBackgroundImage.image = UIImage(named: "3")
-                case .thunderstorm:
-                    mainBackgroundImage.image = UIImage(named: "3")
-                case .windy:
-                    mainBackgroundImage.image = UIImage(named: "3")
-                case .misty:
-                    mainBackgroundImage.image = UIImage(named: "4")
-                case .hazey:
                     mainBackgroundImage.image = UIImage(named: "5")
-                default:
+                case .thunderstorm:
+                    mainBackgroundImage.image = UIImage(named: "8")
+                case .windy:
+                    mainBackgroundImage.image = UIImage(named: "7")
+                case .misty:
+                    mainBackgroundImage.image = UIImage(named: "11")
+                case .hazey:
                     mainBackgroundImage.image = UIImage(named: "4")
+                default:
+                    mainBackgroundImage.image = UIImage(named: "1")
                 }
             }
         } else {
