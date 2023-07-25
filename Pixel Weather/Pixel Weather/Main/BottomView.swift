@@ -79,6 +79,16 @@ extension BottomView {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
     }
+    
+    func getWeather() -> ResponseBody? {
+            return weather
+        }
+    
+    private func handleWeatherResponse(_ weatherData: ResponseBody) {
+            self.weather = weatherData
+            (superview as? MainView)?.setWeatherBackground()
+        }
+
 }
 
 extension BottomView: CLLocationManagerDelegate {
@@ -116,6 +126,7 @@ extension BottomView: CLLocationManagerDelegate {
                     DispatchQueue.main.async {
                         self.weather = weatherData
                         self.updateWeatherData()
+                        self.handleWeatherResponse(weatherData)
                     }
                 } catch {
                     print("Error decoding weather data: \(error)")
