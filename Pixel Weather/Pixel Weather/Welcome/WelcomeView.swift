@@ -117,9 +117,11 @@ extension WelcomeView {
         }
         
         UIView.animate(withDuration: 0.1, animations: scaleDownAnimation) { _ in
-            UIView.animate(withDuration: 0.1, animations: scaleUpAnimation)
+            UIView.animate(withDuration: 0.1, animations: scaleUpAnimation) { _ in
+                (UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController = MainViewController()
+            }
         }
-
+        
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
         locationManager.requestLocation()
@@ -132,17 +134,7 @@ extension WelcomeView: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
             print("Current location: \(location.coordinate.latitude), \(location.coordinate.longitude)")
-            
-            
-            
-               
-            
-            
                         window?.rootViewController = MainViewController()
-            
-            
-            
-            
         }
     }
     
