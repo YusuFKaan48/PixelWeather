@@ -84,17 +84,17 @@ extension WelcomeView {
         ])
         
         welcomeBackgroundImage.image = UIImage(named: "WelcomeBackground")
-        welcomeBackgroundImage.contentMode = .scaleAspectFill
+       
         
         NSLayoutConstraint.activate([
             stackView.centerXAnchor.constraint(equalTo: centerXAnchor),
             stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
+            stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32)
         ])
         NSLayoutConstraint.activate([
-            LocationFindButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            LocationFindButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            LocationFindButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
+            LocationFindButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
             LocationFindButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -48),
             LocationFindButton.heightAnchor.constraint(equalToConstant: 60)
         ])
@@ -134,7 +134,6 @@ extension WelcomeView: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
             print("Current location: \(location.coordinate.latitude), \(location.coordinate.longitude)")
-                        window?.rootViewController = MainViewController()
         }
     }
     
@@ -142,3 +141,4 @@ extension WelcomeView: CLLocationManagerDelegate {
         print("Location error: \(error.localizedDescription)")
     }
 }
+

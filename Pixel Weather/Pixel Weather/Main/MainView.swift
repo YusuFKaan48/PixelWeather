@@ -77,7 +77,7 @@ extension MainView {
                 bottomView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
                 bottomView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32)
             ])
-        }
+}
     
     func setWeatherBackground() {
         if let weather = bottomView.getWeather() {

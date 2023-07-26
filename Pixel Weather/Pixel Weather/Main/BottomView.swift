@@ -42,6 +42,7 @@ extension BottomView {
         }
         weatherState.text = "Loading weather data..."
         weatherState.textColor = .white
+        weatherState.numberOfLines = 0
         
         if let font = UIFont(name: "Minecraft", size: 28) {
             degreeState.font = font
@@ -88,7 +89,6 @@ extension BottomView {
             self.weather = weatherData
             (superview as? MainView)?.setWeatherBackground()
         }
-
 }
 
 extension BottomView: CLLocationManagerDelegate {

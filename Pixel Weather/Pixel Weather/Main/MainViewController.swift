@@ -32,6 +32,5 @@ extension MainViewController {
                         mainView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
                     ])
         }
-
 }
 
