@@ -37,7 +37,7 @@ extension MainView {
             todayWeather.font = font
         }
         todayWeather.text = "Today's weather"
-        todayWeather.textColor = .black
+        todayWeather.textColor = .white
         
     }
     
@@ -87,30 +87,30 @@ extension MainView {
                 
                 switch weatherCondition {
                 case .rainy:
-                    mainBackgroundImage.image = UIImage(named: "3")
+                    mainBackgroundImage.image = UIImage(named: "rain")
                 case .cloudy:
-                    mainBackgroundImage.image = UIImage(named: "2")
+                    mainBackgroundImage.image = UIImage(named: "cloud")
                 case .sunny:
-                    mainBackgroundImage.image = UIImage(named: "1")
+                    mainBackgroundImage.image = UIImage(named: "clear")
                 case .snowy:
-                    mainBackgroundImage.image = UIImage(named: "6")
+                    mainBackgroundImage.image = UIImage(named: "snow")
                 case .foggy:
-                    mainBackgroundImage.image = UIImage(named: "5")
+                    mainBackgroundImage.image = UIImage(named: "fog")
                 case .thunderstorm:
-                    mainBackgroundImage.image = UIImage(named: "8")
+                    mainBackgroundImage.image = UIImage(named: "thunderstorm")
                 case .windy:
-                    mainBackgroundImage.image = UIImage(named: "7")
+                    mainBackgroundImage.image = UIImage(named: "wind1")
                 case .misty:
-                    mainBackgroundImage.image = UIImage(named: "11")
+                    mainBackgroundImage.image = UIImage(named: "mist")
                 case .hazey:
-                    mainBackgroundImage.image = UIImage(named: "4")
+                    mainBackgroundImage.image = UIImage(named: "haze")
                 default:
-                    mainBackgroundImage.image = UIImage(named: "1")
+                    mainBackgroundImage.image = UIImage(named: "welcome")
                 }
             }
         } else {
             print("Weather data is missing")
-            mainBackgroundImage.image = UIImage(named: "WelcomeBackground")
+          mainBackgroundImage.image = UIImage(named: "welcome")
         }
     }
 }

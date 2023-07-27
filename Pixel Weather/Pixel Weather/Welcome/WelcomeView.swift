@@ -83,7 +83,7 @@ extension WelcomeView {
             welcomeBackgroundImage.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
         
-        welcomeBackgroundImage.image = UIImage(named: "WelcomeBackground")
+        welcomeBackgroundImage.image = UIImage(named: "welcome")
        
         
         NSLayoutConstraint.activate([

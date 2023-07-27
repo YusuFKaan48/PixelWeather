@@ -44,7 +44,7 @@ extension LoadingViewController {
             loadingBackgroundImage.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
         
-        loadingBackgroundImage.image = UIImage(named: "WelcomeBackground")
+        loadingBackgroundImage.image = UIImage(named: "welcome")
         
         NSLayoutConstraint.activate([
             nameView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -53,18 +53,20 @@ extension LoadingViewController {
     }
     
     func startTransition() {
-
         let waitDuration: TimeInterval = 1.0
-    
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + waitDuration) { [weak self] in
             guard let self = self else { return }
             
             let mainViewController = MainViewController()
             mainViewController.modalPresentationStyle = .fullScreen
-            mainViewController.view.backgroundColor = UIColor(patternImage: self.loadingBackgroundImage.image ?? UIImage())
-            self.present(mainViewController, animated: false, completion: {
-                self.view.removeFromSuperview()
-            })
+            
+            UIView.transition(with: self.view.window!, duration: 0.5, options: .transitionCrossDissolve, animations: {
+                self.present(mainViewController, animated: false, completion: {
+                    self.view.removeFromSuperview()
+                })
+            }, completion: nil)
         }
     }
+
 }
