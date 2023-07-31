@@ -26,6 +26,19 @@
 		D2F805CA2A5D1D6700F13E4B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F805C92A5D1D6700F13E4B /* MainView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D22FC5522A739339009F72F6 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		D2191B312A627454006EDBEC /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		D2191B332A627997006EDBEC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -34,6 +47,7 @@
 		D2191B3C2A629D8F006EDBEC /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		D2191B3E2A629DC7006EDBEC /* ConverterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterData.swift; sourceTree = "<group>"; };
 		D22FC5332A710DA9009F72F6 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		D264B85F2A77D3D9002AEDC6 /* Pixel Weather.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Pixel Weather.entitlements"; sourceTree = "<group>"; };
 		D26E67E82A654B5300BC55CB /* ColoumnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoumnView.swift; sourceTree = "<group>"; };
 		D2F805982A5C062900F13E4B /* Pixel Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pixel Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F8059B2A5C062900F13E4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +103,7 @@
 		D2F8059A2A5C062900F13E4B /* Pixel Weather */ = {
 			isa = PBXGroup;
 			children = (
+				D264B85F2A77D3D9002AEDC6 /* Pixel Weather.entitlements */,
 				D2F8059B2A5C062900F13E4B /* AppDelegate.swift */,
 				D2F805C62A5D1D3F00F13E4B /* Main */,
 				D2F805C32A5C519F00F13E4B /* Welcome */,
@@ -150,6 +165,7 @@
 				D2F805942A5C062900F13E4B /* Sources */,
 				D2F805952A5C062900F13E4B /* Frameworks */,
 				D2F805962A5C062900F13E4B /* Resources */,
+				D22FC5522A739339009F72F6 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -361,8 +377,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Pixel Weather/Pixel Weather.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Pixel Weather/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -387,8 +405,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Pixel Weather/Pixel Weather.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Pixel Weather/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
