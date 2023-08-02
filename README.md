@@ -20,4 +20,4 @@ First time example:
 
 Second time example:
 
-<img src="https://github.com/YusuFKaan48/PixelWeather/assets/111217286/91bf8704-86b9-40a4-9cd5-d4585db8fd28" alt="GIF Caption" width="187.5" height="406">![second]
+<img src="https://github.com/YusuFKaan48/PixelWeather/assets/111217286/91bf8704-86b9-40a4-9cd5-d4585db8fd28" alt="GIF Caption" width="187.5" height="406">
