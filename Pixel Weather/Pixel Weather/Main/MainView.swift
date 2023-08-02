@@ -16,7 +16,6 @@ class MainView: UIView {
     let cardView = CardView()
     let bottomView = BottomView()
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         style()

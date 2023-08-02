@@ -9,6 +9,7 @@ import UIKit
 import CoreLocation
 
 class BottomView: UIView {
+    
     let locationManager = CLLocationManager()
     var weather: ResponseBody?
     
