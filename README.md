@@ -9,11 +9,11 @@ Pixel Weather provides users with real-time weather and location information, co
 
 
 
-# Login Part
+# Welcome View Part
 
-The LoginView is a login screen that utilizes the protocol-delegate pattern to handle the login event. If a login attempt fails, it displays error messages specific to the situation.
+The LoginView is a login screen that utilizes the protocol-delegate pattern to handle the login event. When the user logs in for the first time, it requests the location information. Once the location is provided, the user is directed to the main application. Subsequent logins will directly redirect the user to the main application without requiring location input again. This functionality is achieved using User Defaults to store the location data.
 
-First login example:
+First time example:
 
 <img src="https://github.com/YusuFKaan48/PixelWeather/assets/111217286/207f7093-81d5-440d-908f-5af5ca130c64" alt="GIF Caption" width="187.5" height="406">
 
