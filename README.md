@@ -6,3 +6,15 @@ Pixel Weather provides users with real-time weather and location information, co
 * 🔨 UI Kit
 * 🗺️ OpenWeather API (https://openweathermap.org/current)
 * 🎨 Midjourney
+
+
+
+# Login Part
+
+The LoginView is a login screen that utilizes the protocol-delegate pattern to handle the login event. If a login attempt fails, it displays error messages specific to the situation.
+
+First login example:
+
+<img src="https://github.com/YusuFKaan48/PixelWeather/assets/111217286/207f7093-81d5-440d-908f-5af5ca130c64" alt="GIF Caption" width="187.5" height="406">
+
+
