@@ -7,7 +7,7 @@ Pixel Weather provides users with real-time weather and location information, co
 * 🔨 UI Kit
 * 🗺️ OpenWeather API (https://openweathermap.org/current)
 * 🎨 Midjourney
-
+* 🖼️ Figma
 
 # Welcome Part
 
